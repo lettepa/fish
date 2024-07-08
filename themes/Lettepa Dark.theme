@@ -1,0 +1,60 @@
+# #ED5A65 red
+# #47D2BC green
+# #37B4FD blue
+# #71DCEA cyan
+# #FD67B8 magenta
+# #F9BF45 yellow
+# #08192D bg
+# #24384F bg0
+# #83A2B7 fg0
+# #CCE0EC fg
+# #CB1B45 red0
+# #00AA90 green0
+# #005CAF blue0
+# #3A8FB7 cyan0
+# #E03C8A magenta0
+# #CA7A2C yellow0
+# #728A9E ignore
+
+# Syntax highlighting
+
+fish_color_normal CCE0EC # fg
+fish_color_command 47D2BC # green
+fish_color_keyword FD67B8 # magenta
+fish_color_quote 37B4FD # blue
+fish_color_redirection FD67B8 # magenta
+fish_color_end 728A9E # ignore
+fish_color_error ED5A65 --bold # red
+fish_color_param CCE0EC # fg
+fish_color_valid_path 37B4FD # blue
+fish_color_option 71DCEA # cyan
+fish_color_comment F9BF45 # yellow
+fish_color_selection 24384F # bg0
+fish_color_operator FD67B8 # magenta
+fish_color_escape 47D2BC # green
+fish_color_autosuggestion 83A2B7 # fg0
+fish_color_cwd 37B4FD # blue
+fish_color_cwd_root 37B4FD # blue
+fish_color_user FD67B8 # magenta
+fish_color_host 47D2BC # green
+fish_color_host_remote 47D2BC # green
+fish_color_status ED5A65 --bold # red
+fish_color_cancel ED5A65 # red
+fish_color_search_match --background 3A8FB7 # cyan0
+fish_color_history_current --reverse
+
+# Pager
+
+fish_pager_color_progress CCE0EC --bold # fg
+fish_pager_color_background
+fish_pager_color_prefix CCE0EC --bold # fg
+fish_pager_color_completion 83A2B7 # fg0
+fish_pager_color_description 83A2B7 # fg0
+fish_pager_color_selected_background --reverse
+fish_pager_color_selected_prefix --bold --reverse
+fish_pager_color_selected_completion --reverse
+fish_pager_color_selected_description --reverse
+fish_pager_color_secondary_background
+fish_pager_color_secondary_prefix CCE0EC --bold # fg
+fish_pager_color_secondary_completion 83A2B7 # fg0
+fish_pager_color_secondary_description 83A2B7 # fg0
