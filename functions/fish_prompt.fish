@@ -13,7 +13,7 @@ function fish_prompt -d '[HH:MM] User@Hostname:Cwd (GitPrompt) [LastPipestatus] 
     set -l lettepa_nakabeni ED5A65
     set -l lettepa_aomidori 00AA90
     set -l lettepa_braomidori 47D2BC
-    set -l lettepa_ruri 005CALF
+    set -l lettepa_ruri 005CAF
     set -l lettepa_brruri 37B4FD
     set -l lettepa_chigusa 3A8FB7
     set -l lettepa_brchigusa 71DCEA
