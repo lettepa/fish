@@ -130,6 +130,7 @@ function fish_prompt -d '[HH:MM] User@Hostname:Cwd (GitPrompt) [LastPipestatus] 
     if test ! $last_pipestatus = 0
         set_color $red --bold
         printf '[%s] ' $last_pipestatus
+        set_color normal
     end
 
     # cmd duration
