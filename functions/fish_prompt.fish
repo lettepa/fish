@@ -5,6 +5,16 @@ function fish_prompt -d '[HH:MM] User@Hostname:Cwd (GitPrompt) [LastPipestatus] 
     set -l cwd (basename (pwd | string replace $HOME "~"))
     set -l cmd_duration (math -s0 "$CMD_DURATION / 1000")
 
+    # Sync with OS
+    #
+    # If enable this feature, the highlighting colors are set to the colors
+    # defined by the terminal. This is helpful when the terminal is able to
+    # switch its color scheme based on the OS appearance (or 'color mode').
+    #
+    # It's recommended to use the corresponding terminal port of Lettepa when
+    # using this feature.
+    set -l sync_with_os true
+
     # Color mode
     set -l is_dark true
 
@@ -29,43 +39,64 @@ function fish_prompt -d '[HH:MM] User@Hostname:Cwd (GitPrompt) [LastPipestatus] 
     set -l lettepa_white CCE0EC
     set -l lettepa_brwhite DFF3FF
 
-    # Palette based on the color mode
-    if $is_dark
-        set -f red $lettepa_nakabeni
-        set -f green $lettepa_braomidori
-        set -f blue $lettepa_brruri
-        set -f cyan $lettepa_brchigusa
-        set -f magenta $lettepa_brtsutsuji
-        set -f yellow $lettepa_tamako
-        set -f bg $lettepa_black
-        set -f bg0 $lettepa_brblack
-        set -f fg0 $lettepa_brgrey
-        set -f fg $lettepa_white
-        set -f red0 $lettepa_kurenai
-        set -f green0 $lettepa_aomidori
-        set -f blue0 $lettepa_ruri
-        set -f cyan0 $lettepa_chigusa
-        set -f magenta0 $lettepa_tsutsuji
-        set -f yellow0 $lettepa_kohaku
-    else
-        set -f red $lettepa_kurenai
-        set -f green $lettepa_aomidori
-        set -f blue $lettepa_ruri
-        set -f cyan $lettepa_chigusa
-        set -f magenta $lettepa_tsutsuji
-        set -f yellow $lettepa_kohaku
-        set -f bg $lettepa_brwhite
-        set -f bg0 $lettepa_white
-        set -f fg0 $lettepa_dimgrey
-        set -f fg $lettepa_brblack
-        set -f red0 $lettepa_nakabeni
-        set -f green0 $lettepa_braomidori
-        set -f blue0 $lettepa_brruri
-        set -f cyan0 $lettepa_brchigusa
-        set -f magenta0 $lettepa_brtsutsuji
-        set -f yellow0 $lettepa_tamako
-    end
+    # The 'ignore' color doesn't change.
     set -l ignore $lettepa_grey
+    # Palette corresponding to the OS appearance
+    if $sync_with_os
+        set -f red brred
+        set -f green brgreen
+        set -f blue brblue
+        set -f cyan brcyan
+        set -f magenta brmagenta
+        set -f yellow bryellow
+        set -f bg black
+        set -f bg0 brblack
+        set -f fg0 white
+        set -f fg brwhite
+        set -f red0 red
+        set -f green0 green
+        set -f blue0 blue
+        set -f cyan0 cyan
+        set -f magenta0 magenta
+        set -f yellow0 yellow
+    else
+        # Palette based on the color mode
+        if $is_dark
+            set -f red $lettepa_nakabeni
+            set -f green $lettepa_braomidori
+            set -f blue $lettepa_brruri
+            set -f cyan $lettepa_brchigusa
+            set -f magenta $lettepa_brtsutsuji
+            set -f yellow $lettepa_tamako
+            set -f bg $lettepa_black
+            set -f bg0 $lettepa_brblack
+            set -f fg0 $lettepa_brgrey
+            set -f fg $lettepa_white
+            set -f red0 $lettepa_kurenai
+            set -f green0 $lettepa_aomidori
+            set -f blue0 $lettepa_ruri
+            set -f cyan0 $lettepa_chigusa
+            set -f magenta0 $lettepa_tsutsuji
+            set -f yellow0 $lettepa_kohaku
+        else
+            set -f red $lettepa_kurenai
+            set -f green $lettepa_aomidori
+            set -f blue $lettepa_ruri
+            set -f cyan $lettepa_chigusa
+            set -f magenta $lettepa_tsutsuji
+            set -f yellow $lettepa_kohaku
+            set -f bg $lettepa_brwhite
+            set -f bg0 $lettepa_white
+            set -f fg0 $lettepa_dimgrey
+            set -f fg $lettepa_brblack
+            set -f red0 $lettepa_nakabeni
+            set -f green0 $lettepa_braomidori
+            set -f blue0 $lettepa_brruri
+            set -f cyan0 $lettepa_brchigusa
+            set -f magenta0 $lettepa_brtsutsuji
+            set -f yellow0 $lettepa_tamako
+        end
+    end
 
     # git prompt settings
     set -g __fish_git_prompt_showcolorhints true

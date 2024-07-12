@@ -1,0 +1,51 @@
+# Lettepa (Sync with OS)
+#
+# Except for the color 'ignore', this fish theme doesn't define any color.
+# Instead, it uses the color scheme from the terminal. So when using this theme,
+# it's highly recommended to also apply the corresponding terminal port of
+# Lettepa port.
+#
+# #728A9E ignore
+
+# Syntax highlighting
+
+fish_color_normal brwhite # fg
+fish_color_command brgreen # green
+fish_color_keyword brmagenta # magenta
+fish_color_quote brblue # blue
+fish_color_redirection brmagenta # magenta
+fish_color_end 728A9E # ignore
+fish_color_error brred --bold # red
+fish_color_param brwhite # fg
+fish_color_valid_path brblue # blue
+fish_color_option brcyan # cyan
+fish_color_comment bryellow # yellow
+fish_color_selection white # bg0
+fish_color_operator brmagenta # magenta
+fish_color_escape brgreen # green
+fish_color_autosuggestion white # fg0
+fish_color_cwd brblue # blue
+fish_color_cwd_root brblue # blue
+fish_color_user brmagenta # magenta
+fish_color_host brgreen # green
+fish_color_host_remote brgreen # green
+fish_color_status brred --bold # red
+fish_color_cancel brred # red
+fish_color_search_match --background cyan # cyan0
+fish_color_history_current --reverse
+
+# Pager
+
+fish_pager_color_progress brwhite --bold # fg
+fish_pager_color_background
+fish_pager_color_prefix brwhite --bold # fg
+fish_pager_color_completion white # fg0
+fish_pager_color_description white # fg0
+fish_pager_color_selected_background --reverse
+fish_pager_color_selected_prefix --bold --reverse
+fish_pager_color_selected_completion --reverse
+fish_pager_color_selected_description --reverse
+fish_pager_color_secondary_background
+fish_pager_color_secondary_prefix brwhite --bold # fg
+fish_pager_color_secondary_completion white # fg0
+fish_pager_color_secondary_description white # fg0
