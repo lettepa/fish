@@ -1,62 +1,62 @@
 # Lettepa Dark
 #
-# #ED5A65 red
-# #47D2BC green
-# #37B4FD blue
-# #71DCEA cyan
-# #FD67B8 magenta
-# #F9BF45 yellow
-# #08192D bg
-# #24384F bg0
-# #83A2B7 fg0
-# #CCE0EC fg
-# #CB1B45 red0
-# #00AA90 green0
-# #005CAF blue0
-# #3A8FB7 cyan0
-# #E03C8A magenta0
-# #CA7A2C yellow0
-# #728A9E ignore
+# #08192d bg,       kachi
+# #0f2540 bg0,      kon
+# #656765 ignore,   nibi
+# #91989f fg0,      ginnezumi
+# #bdc0ba fg,       shironezumi
+# #db4d6d red,      nakabeni
+# #66bab7 green,    mizuasagi
+# #2ea9df blue,     tsuyukusa
+# #7db9de cyan,     wasurenagusa
+# #f596aa magenta,  momo
+# #f7c242 yellow,   hanaba
+# #cb1b45 red0,     kurenai
+# #268785 green0,   seiheki
+# #005caf blue0,    ruri
+# #3a8fb7 cyan0,    chigusa
+# #e03c8a magenta0, tsutsuji
+# #96632e yellow0,  chojicha
 
 # Syntax highlighting
 
-fish_color_normal CCE0EC # fg
-fish_color_command 47D2BC # green
-fish_color_keyword FD67B8 # magenta
-fish_color_quote 37B4FD # blue
-fish_color_redirection FD67B8 # magenta
-fish_color_end 728A9E # ignore
-fish_color_error ED5A65 --bold # red
-fish_color_param CCE0EC # fg
-fish_color_valid_path 37B4FD # blue
-fish_color_option 71DCEA # cyan
-fish_color_comment F9BF45 # yellow
-fish_color_selection 24384F # bg0
-fish_color_operator FD67B8 # magenta
-fish_color_escape 47D2BC # green
-fish_color_autosuggestion 83A2B7 # fg0
-fish_color_cwd 37B4FD # blue
-fish_color_cwd_root 37B4FD # blue
-fish_color_user FD67B8 # magenta
-fish_color_host 47D2BC # green
-fish_color_host_remote 47D2BC # green
-fish_color_status ED5A65 --bold # red
-fish_color_cancel ED5A65 # red
-fish_color_search_match --background 3A8FB7 # cyan0
+fish_color_normal          bdc0ba              # fg
+fish_color_command         66bab7              # green
+fish_color_keyword         f596aa              # magenta
+fish_color_quote           2ea9df              # blue
+fish_color_redirection     f596aa              # magenta
+fish_color_end             656765              # ignore
+fish_color_error           db4d6d       --bold # red
+fish_color_param           bdc0ba              # fg
+fish_color_valid_path      2ea9df              # blue
+fish_color_option          7db9de              # cyan
+fish_color_comment         f7c242              # yellow
+fish_color_selection       0f2540              # bg0
+fish_color_operator        f596aa              # magenta
+fish_color_escape          66bab7              # green
+fish_color_autosuggestion  91989f              # fg0
+fish_color_cwd             2ea9df              # blue
+fish_color_cwd_root        2ea9df              # blue
+fish_color_user            f596aa              # magenta
+fish_color_host            66bab7              # green
+fish_color_host_remote     66bab7              # green
+fish_color_status          db4d6d       --bold # red
+fish_color_cancel          db4d6d              # red
+fish_color_search_match    --background 3a8fb7 # cyan0
 fish_color_history_current --reverse
 
 # Pager
 
-fish_pager_color_progress CCE0EC --bold # fg
+fish_pager_color_progress              bdc0ba --bold # fg
 fish_pager_color_background
-fish_pager_color_prefix CCE0EC --bold # fg
-fish_pager_color_completion 83A2B7 # fg0
-fish_pager_color_description 83A2B7 # fg0
-fish_pager_color_selected_background --reverse
-fish_pager_color_selected_prefix --bold --reverse
-fish_pager_color_selected_completion --reverse
-fish_pager_color_selected_description --reverse
+fish_pager_color_prefix                bdc0ba --bold # fg
+fish_pager_color_completion            91989f        # fg0
+fish_pager_color_description           91989f        # fg0
+fish_pager_color_selected_background   --reverse
+fish_pager_color_selected_prefix       --bold --reverse
+fish_pager_color_selected_completion   --reverse
+fish_pager_color_selected_description  --reverse
 fish_pager_color_secondary_background
-fish_pager_color_secondary_prefix CCE0EC --bold # fg
-fish_pager_color_secondary_completion 83A2B7 # fg0
-fish_pager_color_secondary_description 83A2B7 # fg0
+fish_pager_color_secondary_prefix      bdc0ba --bold # fg
+fish_pager_color_secondary_completion  91989f        # fg0
+fish_pager_color_secondary_description 91989f        # fg0

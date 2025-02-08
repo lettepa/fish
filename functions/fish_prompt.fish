@@ -19,40 +19,43 @@ function fish_prompt -d '[HH:MM] User@Hostname:Cwd (GitPrompt) [LastPipestatus] 
     set -l is_dark true
 
     # Lettepa full palette
-    set -l lettepa_kurenai CB1B45
-    set -l lettepa_nakabeni ED5A65
-    set -l lettepa_aomidori 00AA90
-    set -l lettepa_braomidori 47D2BC
-    set -l lettepa_ruri 005CAF
-    set -l lettepa_brruri 37B4FD
-    set -l lettepa_chigusa 3A8FB7
-    set -l lettepa_brchigusa 71DCEA
-    set -l lettepa_tsutsuji E03C8A
-    set -l lettepa_brtsutsuji FD67B8
-    set -l lettepa_kohaku CA7A2C
-    set -l lettepa_tamako F9BF45
-    set -l lettepa_black 08192D
-    set -l lettepa_brblack 24384F
-    set -l lettepa_dimgrey 5C7186
-    set -l lettepa_grey 728A9E
-    set -l lettepa_brgrey 83A2B7
-    set -l lettepa_white CCE0EC
-    set -l lettepa_brwhite DFF3FF
+    set -l lettepa_kachi 08192d
+    set -l lettepa_kon 0f2540
+    set -l lettepa_keshizumi 434343
+    set -l lettepa_nibi 656765
+    set -l lettepa_hai 828282
+    set -l lettepa_ginnezumi 91989f
+    set -l lettepa_shironezumi bdc0ba
+    set -l lettepa_shironeri fcfaf2
+    set -l lettepa_nakabeni db4d6d
+    set -l lettepa_kurenai cb1b45
+    set -l lettepa_mizuasagi 66bab7
+    set -l lettepa_seiheki 268785
+    set -l lettepa_tsuyukusa 2ea9df
+    set -l lettepa_ruri 005caf
+    set -l lettepa_wasurenagusa 7db9de
+    set -l lettepa_chigusa 3a8fb7
+    set -l lettepa_momo f596aa
+    set -l lettepa_tsutsuji e03c8a
+    set -l lettepa_hanaba f7c242
+    set -l lettepa_chojicha 96632e
 
-    # The 'ignore' color doesn't change.
-    set -l ignore $lettepa_grey
     # Palette corresponding to the OS appearance
     if $sync_with_os
+        # Main colors
+        set -f bg black
+        set -f bg0 brblack
+        set -f ignore 747574 # a mix of 'nibi' and 'hai'
+        set -f fg0 white
+        set -f fg brwhite
+        # Primary accent colors
         set -f red brred
         set -f green brgreen
         set -f blue brblue
         set -f cyan brcyan
         set -f magenta brmagenta
         set -f yellow bryellow
-        set -f bg black
-        set -f bg0 brblack
-        set -f fg0 white
-        set -f fg brwhite
+        # Secondary accent colors
         set -f red0 red
         set -f green0 green
         set -f blue0 blue
@@ -62,39 +65,47 @@ function fish_prompt -d '[HH:MM] User@Hostname:Cwd (GitPrompt) [LastPipestatus] 
     else
         # Palette based on the color mode
         if $is_dark
+            # Main colors
+            set -f bg $lettepa_kachi
+            set -f bg0 $lettepa_kon
+            set -f ignore $lettepa_nibi
+            set -f fg0 $lettepa_ginnezumi
+            set -f fg $lettepa_shironezumi
+            # Primary accent colors
             set -f red $lettepa_nakabeni
-            set -f green $lettepa_braomidori
-            set -f blue $lettepa_brruri
-            set -f cyan $lettepa_brchigusa
-            set -f magenta $lettepa_brtsutsuji
-            set -f yellow $lettepa_tamako
-            set -f bg $lettepa_black
-            set -f bg0 $lettepa_brblack
-            set -f fg0 $lettepa_brgrey
-            set -f fg $lettepa_white
+            set -f green $lettepa_mizuasagi
+            set -f blue $lettepa_tsuyukusa
+            set -f cyan $lettepa_wasurenagusa
+            set -f magenta $lettepa_momo
+            set -f yellow $lettepa_hanaba
+            # Secondary accent colors
             set -f red0 $lettepa_kurenai
-            set -f green0 $lettepa_aomidori
+            set -f green0 $lettepa_seiheki
             set -f blue0 $lettepa_ruri
             set -f cyan0 $lettepa_chigusa
             set -f magenta0 $lettepa_tsutsuji
-            set -f yellow0 $lettepa_kohaku
+            set -f yellow0 $lettepa_chojicha
         else
+            # Main colors
+            set -f bg $lettepa_shironeri
+            set -f bg0 $lettepa_shironezumi
+            set -f ignore $lettepa_hai
+            set -f fg0 $lettepa_keshizumi
+            set -f fg $lettepa_kon
+            # Primary accent colors
             set -f red $lettepa_kurenai
-            set -f green $lettepa_aomidori
+            set -f green $lettepa_seiheki
             set -f blue $lettepa_ruri
             set -f cyan $lettepa_chigusa
             set -f magenta $lettepa_tsutsuji
-            set -f yellow $lettepa_kohaku
-            set -f bg $lettepa_brwhite
-            set -f bg0 $lettepa_white
-            set -f fg0 $lettepa_dimgrey
-            set -f fg $lettepa_brblack
+            set -f yellow $lettepa_chojicha
+            # Secondary accent colors
             set -f red0 $lettepa_nakabeni
-            set -f green0 $lettepa_braomidori
-            set -f blue0 $lettepa_brruri
-            set -f cyan0 $lettepa_brchigusa
-            set -f magenta0 $lettepa_brtsutsuji
-            set -f yellow0 $lettepa_tamako
+            set -f green0 $lettepa_mizuasagi
+            set -f blue0 $lettepa_tsuyukusa
+            set -f cyan0 $lettepa_wasurenagusa
+            set -f magenta0 $lettepa_momo
+            set -f yellow0 $lettepa_hanaba
         end
     end
 
